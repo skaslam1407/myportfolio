@@ -33,11 +33,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)'; // Keep light background for navbar
         navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)'; // Keep light background for navbar
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)'; // Keep light shadow
     }
 });
 
@@ -284,8 +284,8 @@ function createScrollToTopButton() {
         right: 30px;
         width: 50px;
         height: 50px;
-        background: #6366f1;
-        color: white;
+        background: linear-gradient(135deg, #FF9933, #FFAD66); /* Saffron gradient */
+        color: white; /* White text on saffron */
         border: none;
         border-radius: 50%;
         cursor: pointer;
